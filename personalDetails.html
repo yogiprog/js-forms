@@ -1,0 +1,105 @@
+<!DOCTYPE html>   
+<script src="js/personalDetails.js"></script> 
+
+<style>
+    .element-space{
+    clear:left;
+    height:10px;
+    margin: 10px;
+}
+.element-image{
+    clear:left;
+    height:110px;
+    margin: 20px;
+}
+.element-address{
+    clear:left;
+    height:100px;
+    margin: 20px;
+}
+
+
+</style>
+<html>  
+<head>  
+<title> Personal details Page </title>  
+</head>    
+<body>    
+     <h2>  Personal details </h2>
+     <div class="element-image">
+        <img id="output_image" height=100px width=100px\>
+        <input type="file" accept="image/*" onchange="preview_image(event)">
+        </div><br>
+        <div class="element-space">
+            <label>First name : </label>   
+            <input type="text" placeholder="First name"  id="firstName" onchange="setFirstName()" >
+        </div>
+        <div class="element-space">
+            <label>Last name : </label>   
+            <input type="text" placeholder="Last name"" id="lastName" > <br>
+        </div><br>
+        <div  class="element-address">
+            <label for="gender">Gender: </label>
+            <input type="radio" value="1" name="genderS" checked="checked" id = "radioMale" value="Male">Male </input>
+            <input type="radio" value="0" name="genderS" id = "radioFemale" value="Female">Female</div>
+        </div> <br>
+        <div class="element-space">
+            <label>DOB : </label>   
+            <input type="text" placeholder="mm/dd/yyy"  id="dob" ><br>
+        </div><br>
+
+    <h2>  Address details </h2>
+        <div class="element-address" id="address">
+            <label>Address: </label>    
+            <input type="text" placeholder="Street and apt number" id="address_street" > <br>
+            <input type="text" placeholder="Address" id="address_city" > <br>
+            <select  id="city">
+                <option value="Bellevue">Bellevue</option>
+                <option value="San Jose">San Jose</option>
+            </select><br>
+            <select id="State">
+                <option value="volvo">WA</option>
+                <option value="saab">CA</option>
+              </select><br>
+            <input type="text" placeholder="PIN" id="address_pin" > <br>
+        </div> <br>
+        <div class="element-space">
+            <label>Different address </label>  
+            <input type="checkbox"  id="sameAddress" checked="checked" onclick="sameMailingAddress()">
+        </div> <br>
+        <div class="element-address" id= "mailing_address">
+            <label>Mailing address: </label>    
+            <input type="text" placeholder="Street and apt number" id="address_street" > <br>
+            <input type="text" placeholder="Address" id="address_city" > <br>
+            <select  id="city">
+                <option value="volvo">Bellevue</option>
+                <option value="saab">San Jose</option>
+            </select><br>
+            <select id="State">
+                <option value="volvo">WA</option>
+                <option value="saab">CA</option>
+              </select><br>
+            <input type="text" placeholder="PIN" id="address_pin" > <br>
+        </div> <br>
+
+        <h2>  Contact info: </h2>
+        <div class="element-space">
+            <label>Email : </label>   
+            <input type="text" placeholder="email"  id="email" onclick="validateEmail()" ><br>
+        </div><br>
+        <div class="element-space">
+            <label>Phone Number : </label>   
+            <input type="text" placeholder="Phone Number"  id="phoneNumber" onclick="validateEmail()" ><br>
+        </div><br>
+
+        <h2>  Extra </h2>
+        <div  class="element-space">
+            <p>Comments: </p>
+            <input type="text" id = "textComment" ><br>
+        </div> <br>
+        <div class="element-space">
+            <button type="submit" onclick="resetFrom()">Reset</button>
+            <button type="submit" onclick="submit()">Submit</button>   
+        </div><br>
+</body>     
+</html> 

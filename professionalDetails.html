@@ -1,0 +1,38 @@
+<!DOCTYPE html>   
+<script src="js/login.js"></script> 
+<style>
+    .element-space{
+    clear:left;
+    height:25px;
+    margin: 20px;
+}
+</style>
+<html>  
+<head>  
+<title> Professional Page </title>  
+</head>    
+<body>    
+     <h1>  Personal details </h1>
+        <div class="element-space">
+            <label>First name : </label>   
+            <input type="text" placeholder="First name"  id="firstname" required><br>
+        </div>   
+        <div class="element-space">
+            <label>Last name : </label>   
+            <input type="text" placeholder="Last name"" id="LastName" required> <br>
+        </div>        
+        <div class="element-space">
+            <label>Address: </label>    
+            <input type="text" placeholder="Address" id="address" required> <br>
+        </div>
+        <div class="element-space">
+            <label>same address </label>  
+            <input type="checkbox" id="sameAddress" onclick="sameMailingAddress()" value="Bike">
+        </div>
+        <div class="element-space">
+            <label>Mailing address: </label>    
+            <input type="text" placeholder="Mailing address"" id="mailingAddress" required> <br>
+        </div>    
+            <button type="submit" onclick="login()">Next</button>   
+</body>     
+</html> 
